@@ -6,7 +6,7 @@
         xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:DesignApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1080" 
+        Title="MainWindow" WindowState="Maximized"
         AllowsTransparency="True" Background="Transparent"
         WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Border Background="#eff2f7" CornerRadius="30" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
@@ -104,7 +104,20 @@
                 <icons:PackIconMaterial Kind="Magnify" Width="15" Height="15" VerticalAlignment="Center"
                                         Margin="0 0 15 0" Foreground="#b0b9c6" HorizontalAlignment="Right"/>
             </Grid>
-            
+
+            <StackPanel Orientation="Horizontal"  Grid.Column="1" HorizontalAlignment="Right" Margin="10 0">
+                <Button x:Name="minimizeButton"  Style="{StaticResource minimizeButton}" Click="minimizeButton_Click">
+                    -
+                </Button>
+
+                <Button x:Name="exitButton" Style="{StaticResource minimizeButton}" Click="exitButton_Click">
+                    X
+                </Button>
+            </StackPanel>
+           
+
+
+
         </Grid>
     </Border>
 </Window>
